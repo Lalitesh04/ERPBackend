@@ -272,7 +272,7 @@ public class AdminController {
         if (feePayments.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NO_CONTENT).body("No FeePayments Found");
         }
-        return ResponseEntity.status(HttpStatus.OK).body(feePayments);
+        return ResponseEntity.ok(feePayments);
     }
 
     @GetMapping("viewAllFeePaymentsByStudentId")

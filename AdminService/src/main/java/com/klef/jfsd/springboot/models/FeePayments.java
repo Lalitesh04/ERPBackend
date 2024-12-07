@@ -11,7 +11,7 @@ public class FeePayments {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.ALL)
     private Student student;
     private String  transactionId;
     private double amount;

@@ -13,19 +13,28 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String studentId;
+
     private String name;
+
     private String email;
+
     private String phone;
+
     private String address;
+
     private String gender;
+
     private LocalDate birthDate;
-    private String password="klu@123";
+
+    private String password;
+
     @Lob
-    @Column(nullable = false, columnDefinition = "LONGTEXT")
     private String image;
-
-    private  boolean approved;
-    private  boolean registered;
-    private LocalDateTime createdAt=LocalDateTime.now();
-
+    private boolean approved;
+    private boolean registered;
+    private LocalDateTime createdAt;
+    public Student() {
+        this.password = "klu@123";
+        this.createdAt = LocalDateTime.now();
+    }
 }

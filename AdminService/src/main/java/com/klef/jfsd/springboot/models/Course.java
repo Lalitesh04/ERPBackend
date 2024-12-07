@@ -13,12 +13,12 @@ public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String courseCode;
-    private String courseName;
+      private String courseCode;
+      private String courseName;
     private int credits;
-    private String LTPS;
-    private String year;
-    private String semester;
+      private String LTPS;
+      private String year;
+      private String semester;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JsonIgnoreProperties({"email", "phone", "address", "department", "gender", "birthDate", "password", "image", "createdAt"})

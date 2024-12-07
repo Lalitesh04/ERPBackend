@@ -1,6 +1,5 @@
 package com.klef.jfsd.springboot.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 

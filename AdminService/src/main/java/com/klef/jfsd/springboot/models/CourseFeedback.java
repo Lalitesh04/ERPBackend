@@ -19,7 +19,6 @@ public class CourseFeedback {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(columnDefinition = "section_id")
     private Section section;
-
     private String feedback;
 
 }
