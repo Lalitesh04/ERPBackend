@@ -23,17 +23,18 @@ public class ApiKeyFilter extends OncePerRequestFilter {
                                     FilterChain filterChain) throws  ServletException, IOException {
 
         String apiKey = request.getHeader(API_KEY_HEADER);
-
-        if(request.getRequestURI().startsWith("/api/")){
-            if (VALID_API_KEY.equals(apiKey)) {
                 filterChain.doFilter(request, response);
-            }else {
-                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                response.getWriter().write("Invalid API key");
-            }
-        }else{
-            filterChain.doFilter(request, response);
 
-        }
+        // if(request.getRequestURI().startsWith("/api/")){
+        //     if (VALID_API_KEY.equals(apiKey)) {
+        //         filterChain.doFilter(request, response);
+        //     }else {
+        //         response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+        //         response.getWriter().write("Invalid API key");
+        //     }
+        // }else{
+        //     filterChain.doFilter(request, response);
+
+        // }
     }
 }
